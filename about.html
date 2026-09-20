@@ -19,10 +19,34 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+<meta name="description" content="Who we are, our philosophy, our history, and the student roles that put every edition together.">
+<link rel="canonical" href="https://churchillchronicleofficial.github.io/the-churchill-chronicle/about.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="About — The Churchill Chronicle">
+<meta property="og:description" content="Who we are, our philosophy, our history, and the student roles that put every edition together.">
+<meta property="og:url" content="https://churchillchronicleofficial.github.io/the-churchill-chronicle/about.html">
+<meta property="og:image" content="https://churchillchronicleofficial.github.io/the-churchill-chronicle/assets/social/og-image.jpg">
+<!-- TODO: create assets/social/og-image.jpg (1200x630px) — a simple logo-on-paper
+     image works well. Every page shares this one image for now. -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — The Churchill Chronicle">
+<meta name="twitter:description" content="Who we are, our philosophy, our history, and the student roles that put every edition together.">
+<meta name="twitter:image" content="https://churchillchronicleofficial.github.io/the-churchill-chronicle/assets/social/og-image.jpg">
+
+<!-- Free, privacy-friendly analytics (GoatCounter). Sign up free at
+     https://www.goatcounter.com, then replace REPLACE-ME below with your
+     own site code (find it in your GoatCounter settings). Until you do,
+     this script simply won't send any data anywhere. -->
+<script data-goatcounter="https://theofficialchurchillchronicle.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
 </head>
 <body>
 
@@ -43,9 +67,24 @@
         <a href="contact.html">Contact</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme">&#9789;</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">&#9776;</button>
     </div>
   </div>
 </header>
+
+<div class="mobile-nav-overlay" id="mobileNav">
+  <div class="wrap mobile-nav-header">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="mobile-nav-links wrap">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="team.html">Team</a>
+      <a href="editions.html">Past Editions</a>
+      <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
 
 <main class="wrap">
 
@@ -189,7 +228,7 @@
       desc: "Promote the current edition prior to release and after publication. Let the school know about Chronicle events and open writing submissions through posters, reels, posts, foyer pop-up booths, etc.",
       names: [
         "Alexis Avery Leong",
-        "Amal aamir",
+        "Amal Aamir",
         "Emilia Romagnoli",
         "Gaurika Guglani",
         "Hailey Wong",
@@ -232,7 +271,7 @@
     photographer: {
       title: "Photographers",
       desc: "Submit photographs to elevate the design of the Chronicle.",
-      names: ["ASLAM ALI", "Carolyn G.", "Daisy Q", "Edwin Lu", "Kaylee Nham", "Kaylee Tang", "Pelumi", "Rima Hammami", "Sophie", "Tahawur Satwat", "Umesh Ahuja"]
+      names: ["Aslam Ali", "Carolyn G.", "Daisy Q", "Edwin Lu", "Kaylee Nham", "Kaylee Tang", "Pelumi", "Rima Hammami", "Sophie", "Tahawur Satwat", "Umesh Ahuja"]
     },
     cartoonists: {
       title: "Cartoonists",
@@ -303,6 +342,34 @@
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
       updateIcon();
+    });
+  })();
+</script>
+
+
+<script>
+  (function () {
+    var menuToggle = document.getElementById('menuToggle');
+    var mobileNav = document.getElementById('mobileNav');
+    var mobileNavClose = document.getElementById('mobileNavClose');
+    if (!menuToggle || !mobileNav) return;
+
+    function openMenu() {
+      mobileNav.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', openMenu);
+    mobileNavClose.addEventListener('click', closeMenu);
+    mobileNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
     });
   })();
 </script>
