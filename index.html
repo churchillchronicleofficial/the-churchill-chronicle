@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      (function () {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>The Churchill Chronicle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <img class="logo-mark" src="assets/images/logo.svg" alt="Churchill Chronicle logo">
+      <div class="brand-text">
+        <div class="name">The Churchill Chronicle</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="editions.html">Past Editions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme">&#9789;</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="hero-frame">
+      <div class="meta-row">
+        <span>Summer edition &middot; 2026</span>
+        <span class="latest">Latest edition</span>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <p class="tagline">"Speak even as your voice trembles, write even as your hands shake."</p>
+          <h1 class="hero-title">The Summer edition is out!</h1>
+          <p class="hero-sub">One of our 4 editions made every school year, written and designed by students at Sir Winston Churchill. This edition features a collection of personal summer narratives, reflective essays, and creative nonfiction pieces hidden "Under The Sea."</p>
+          <a href="#" class="read-link">Read the issue &rarr;</a>
+        </div>
+        <div class="cover-frame">
+          <span class="stamp-tag">New</span>
+          <img src="assets/covers/summer-2026-cover.png" alt="Summer 2026 edition cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="index-section">
+    <p class="index-heading">Around the site</p>
+    <div class="index-grid">
+      <div class="index-card">
+        <p class="index-num">01</p>
+        <h3>About</h3>
+        <p>Who we are, what we aim to do, and the teams that make the Chronicle possible.</p>
+        <a href="about.html">Read more &rarr;</a>
+      </div>
+      <div class="index-card">
+        <p class="index-num">02</p>
+        <h3>The team</h3>
+        <p>Meet the execs who write, edit, design, and put each edition together.</p>
+        <a href="team.html">Meet the team &rarr;</a>
+      </div>
+      <div class="index-card">
+        <p class="index-num">03</p>
+        <h3>Past editions</h3>
+        <p>Every edition we've published, sorted by school year, in PDF.</p>
+        <a href="editions.html">Browse the archive &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>&copy; Churchill Chronicle</span>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/thechurchillchronicle/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:churchillchronicleofficial@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('themeToggle');
+    function currentTheme() {
+      var attr = document.documentElement.getAttribute('data-theme');
+      if (attr) return attr;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function updateIcon() {
+      toggle.textContent = currentTheme() === 'dark' ? '\u2600' : '\u263D';
+    }
+    updateIcon();
+    toggle.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateIcon();
+    });
+  })();
+</script>
+
+</body>
+</html>

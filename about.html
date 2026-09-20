@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function () {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About — The Churchill Chronicle</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <img class="logo-mark" src="assets/images/logo.svg" alt="Churchill Chronicle logo">
+      <div class="brand-text">
+        <div class="name">The Churchill Chronicle</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="team.html">Team</a>
+        <a href="editions.html">Past Editions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme">&#9789;</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-header">
+    <p class="page-eyebrow">About</p>
+  </div>
+
+  <section class="about-section prose">
+    <p>
+      The Churchill Chronicle is a student-run magazine of
+      <a href="https://sirwinstonchurchill.cbe.ab.ca/" target="_blank" rel="noopener">Sir Winston Churchill High School</a>
+      in Calgary, Alberta.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>Philosophy</h2>
+    <div class="prose">
+      <p>
+        The Churchill Chronicle is dedicated to informing, entertaining, and representing the Churchill community.
+        As a team of competent and zealous students, we strive to foster a sense of school community and spirit
+        by acting as a voice and mode of expression for the student body.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>History</h2>
+    <div class="prose">
+      <p>
+        The Churchill Chronicle began in the 2011–2012 school year as a student-run newspaper club called
+        <a href="https://thechurchillian.wordpress.com/" target="_blank" rel="noopener">The Churchillian</a>.
+        Early issues were even featured on the official school website.
+      </p>
+      <p>
+        In the following year, the club rebranded as
+        <a href="https://thechurchillchronicle.wordpress.com/" target="_blank" rel="noopener">The Churchill Chronicle</a>,
+        publishing student writing and artwork on a WordPress site across a wide range of topics.
+      </p>
+      <p>
+        During the 2018–2019 school year, the
+        <a href="https://theofficialchurchillchronicle.wordpress.com/" target="_blank" rel="noopener">Chronicle</a>
+        began transitioning from a newspaper to a full magazine after the friendly people at Little Rock Printing
+        of Inglewood offered funding to support printed editions.
+      </p>
+      <p>
+        Since then, the Chronicle has continued to evolve. Today, we publish four editions each school year,
+        available both online (on this website) and in print. Physical copies can often be found in the school
+        office, showcasing the ongoing creativity and dedication of our student contributors.
+      </p>
+    </div>
+  </section>
+
+  <section class="roles-section">
+    <h2 class="about-section-title">Roles</h2>
+    <p class="roles-intro">Every edition is put together by students working across a few different roles. Click any role to see who's covering it this year.</p>
+
+    <div class="role-grid">
+      <button class="role-card" data-role="editors">
+        <h3>Editors</h3>
+        <p>Review articles for appropriateness, clarity, grammar, and plagiarism, and lead and coordinate members of a group.</p>
+        <span class="role-see">See this year's editors &rarr;</span>
+      </button>
+
+      <button class="role-card" data-role="marketing">
+        <h3>Marketing</h3>
+        <p>Promote the current edition before and after release, and let the school know about Chronicle events and open submissions.</p>
+        <span class="role-see">See this year's marketing team &rarr;</span>
+      </button>
+
+      <button class="role-card" data-role="writers">
+        <h3>Writers / Reporters</h3>
+        <p>Write poetry, prose, and short stories, cover school and community events, or write a consistent column on a favourite topic.</p>
+        <span class="role-see">See this year's writers &amp; reporters &rarr;</span>
+      </button>
+
+      <button class="role-card" data-role="designers">
+        <h3>Designers</h3>
+        <p>Design a page of the Chronicle with that edition's theme in mind.</p>
+        <span class="role-see">See this year's designers &rarr;</span>
+      </button>
+
+      <button class="role-card" data-role="photographer">
+        <h3>Photographers</h3>
+        <p>Submit photographs to elevate the design of the Chronicle.</p>
+        <span class="role-see">See this year's photographers &rarr;</span>
+      </button>
+
+      <button class="role-card" data-role="cartoonists">
+        <h3>Cartoonists</h3>
+        <p>Submit self-created illustrations, cartoons, and comics to be featured in the Chronicle.</p>
+        <span class="role-see">See this year's cartoonists &rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="disclaimer-section">
+    <p>
+      The opinions expressed within any published article, report or submission reflect those of the author
+      and should not be considered to reflect those of Sir Winston Churchill High School or the Calgary Board
+      of Education. The information contained in this newspaper is believed to be accurate, but is not
+      warranted to be so.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>&copy; Churchill Chronicle</span>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/thechurchillchronicle/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:churchillchronicleofficial@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ---- role popup modal ---- -->
+<div class="modal-overlay" id="roleModal">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">Close &times;</button>
+    <p class="modal-eyebrow">This year's</p>
+    <h3 id="modalTitle"></h3>
+    <p class="modal-desc" id="modalDesc"></p>
+    <ul class="modal-names" id="modalNames"></ul>
+  </div>
+</div>
+
+<script>
+  /* FUTURE EXECS: edit the names below each school year — this is the only
+     place you need to update once your exec list changes. Keys here must
+     match the data-role attribute on each .role-card button above. */
+  const roles = {
+    editors: {
+      title: "Editors",
+      desc: "Review articles for appropriateness, clarity, grammar, and plagiarism, and lead and coordinate members of a group.",
+      names: ["Naina Khera", "Kashika Jain", "Ufuoma Emuobome", "Neer Mann", "Angela", "Affaaf Ansari", "Emma Wang"]
+    },
+    marketing: {
+      title: "Marketing Team",
+      desc: "Promote the current edition prior to release and after publication. Let the school know about Chronicle events and open writing submissions through posters, reels, posts, foyer pop-up booths, etc.",
+      names: [
+        "Alexis Avery Leong",
+        "Amal aamir",
+        "Emilia Romagnoli",
+        "Gaurika Guglani",
+        "Hailey Wong",
+        "Kaylin Nguyen",
+        "Mina Pan",
+        "Simrah Khan"
+      ]
+    },
+    writers: {
+      title: "Writers/Reporters",
+      desc: "Write poetry, prose, short stories, or much more! Some writers are Columnists, who consistently write articles focused on a specific topic. Others are reporters, who report on current or past school or community events, and interview members of the community.",
+      names: [
+        "Aiden Xiong - Writer",
+        "Destiney Huang - Writer",
+        "Greta Blanton - Writer",
+        "H. Rauf - Writer",
+        "Jenny Zhou - Writer",
+        "Luna Tekie - Writer",
+        "Lovita Ea - Writer",
+        "Mathew Lo - Writer",
+        "Rachel W. - Writer",
+        "Rashdan - Writer",
+        "Sarah A - Writer",
+        "the Jazzmeister - Writer",
+        "Cadence Wong - Columnist",
+        "Lyric Blackthorn - Columnist",
+        "Ranbir Masoun - Columnist",
+        "Akirausyu - Reporter",
+        "Emaan Ali - Reporter",
+        "Grace Lo - Reporter",
+        "Mannat.M - Reporter",
+        "Siddharth Bhalla - Reporter"
+      ]
+    },
+    designers: {
+      title: "Designers",
+      desc: "Design a page of the Chronicle with that edition's theme in mind.",
+      names: ["areesha", "Charline Lai", "Chloe. F", "Crystal Lee", "Dinuli De Silva", "Ewa", "Farriell", "helena", "Julie Chen", "Lorry Li", "Maham Khan", "Musfirah K", "Olivia Wang", "Tran Nguyen"]
+    },
+    photographer: {
+      title: "Photographers",
+      desc: "Submit photographs to elevate the design of the Chronicle.",
+      names: ["ASLAM ALI", "Carolyn G.", "Daisy Q", "Edwin Lu", "Kaylee Nham", "Kaylee Tang", "Pelumi", "Rima Hammami", "Sophie", "Tahawur Satwat", "Umesh Ahuja"]
+    },
+    cartoonists: {
+      title: "Cartoonists",
+      desc: "Submit self-created illustrations, cartoons and comics to be featured in the Chronicle.",
+      names: ["Anisa Kazi", "AZL", "Elaine Thomson", "Grace", "Heer Prajapati", "Leslie K", "Miriku", "Serena"]
+    }
+  };
+
+  const overlay = document.getElementById("roleModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDesc = document.getElementById("modalDesc");
+  const modalNames = document.getElementById("modalNames");
+  let lastFocused = null;
+
+  function openModal(roleKey) {
+    const role = roles[roleKey];
+    if (!role) return;
+    modalTitle.textContent = role.title;
+    modalDesc.textContent = role.desc;
+    modalNames.innerHTML = "";
+    role.names.forEach(function (name) {
+      const li = document.createElement("li");
+      li.textContent = name;
+      modalNames.appendChild(li);
+    });
+    lastFocused = document.activeElement;
+    overlay.classList.add("open");
+    document.getElementById("modalClose").focus();
+    document.addEventListener("keydown", onKeydown);
+  }
+
+  function closeModal() {
+    overlay.classList.remove("open");
+    document.removeEventListener("keydown", onKeydown);
+    if (lastFocused) lastFocused.focus();
+  }
+
+  function onKeydown(e) {
+    if (e.key === "Escape") closeModal();
+  }
+
+  document.querySelectorAll(".role-card").forEach(function (card) {
+    card.addEventListener("click", function () {
+      openModal(card.getAttribute("data-role"));
+    });
+  });
+
+  document.getElementById("modalClose").addEventListener("click", closeModal);
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) closeModal();
+  });
+</script>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('themeToggle');
+    function currentTheme() {
+      var attr = document.documentElement.getAttribute('data-theme');
+      if (attr) return attr;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function updateIcon() {
+      toggle.textContent = currentTheme() === 'dark' ? '\u2600' : '\u263D';
+    }
+    updateIcon();
+    toggle.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateIcon();
+    });
+  })();
+</script>
+
+</body>
+</html>

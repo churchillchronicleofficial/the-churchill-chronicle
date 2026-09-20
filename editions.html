@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function () {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Past Editions — The Churchill Chronicle</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <img class="logo-mark" src="assets/images/logo.svg" alt="Churchill Chronicle logo">
+      <div class="brand-text">
+        <div class="name">The Churchill Chronicle</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="editions.html" class="active">Past Editions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme">&#9789;</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-header">
+    <p class="page-eyebrow">Past editions</p>
+  </div>
+
+  <div class="editions-intro">
+    <p>Every edition, sorted by school year. Click a cover to open the PDF. More years are on the way — for now, here are the last three.</p>
+  </div>
+
+  <!--
+    FUTURE EXECS: 
+    HOW TO ADD A NEW SCHOOL YEAR OR EDITION
+    1. Copy one whole <section class="edition-year"> block below.
+    2. Update the year in <h2> and the edition-count text.
+    3. For each edition, replace the .edition-cover-placeholder div with:
+         <img src="assets/covers/SEASON-YEAR-cover.jpg" alt="SEASON YEAR edition cover">
+       and point the surrounding <a> href at the real PDF:
+         href="assets/pdfs/SEASON-YEAR.pdf"
+    4. Keep the most recent year at the top of the page.
+  -->
+
+
+<!-- 2026-2027 -->
+<section class="edition-year">
+    <div class="edition-year-header">
+      <h2>2026 &ndash; 2027</h2>
+      <span class="edition-count">0 editions</span>
+    </div>
+    <div class="edition-grid">
+
+      <a class="edition-card" href="assets/pdfs/fall-2026.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+          <div class="edition-cover-placeholder">
+            <span class="label">Coming Soon!</span>
+            <span class="file">Expected release before <b>Halloween</b></span>
+          </div>
+        </div>
+        <span class="edition-season">Fall 2026</span>
+      </a>
+
+    </div>
+  </section>
+
+
+<!-- 2025-2026 -->
+  <section class="edition-year">
+    <div class="edition-year-header">
+      <h2>2025 &ndash; 2026</h2>
+      <span class="edition-count">3 editions</span>
+    </div>
+    <div class="edition-grid">
+
+      <!-- No Fall edition due to strike :( -->
+
+      <a class="edition-card" href="assets/pdfs/winter-2025.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+          <img src="assets/covers/winter-2025-cover.png" alt="Winter 2025 edition cover">
+        </div>
+        <span class="edition-season">Winter 2025</span>
+      </a>
+
+      <a class="edition-card" href="assets/pdfs/spring-2026.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+          <img src="assets/covers/spring-2026-cover.png" alt="Spring 2026 edition cover">
+        </div>
+        <span class="edition-season">Spring 2026</span>
+      </a>
+
+      <a class="edition-card" href="assets/pdfs/summer-2026.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+          <img src="assets/covers/summer-2026-cover.png" alt="Summer 2026 edition cover">
+        </div>
+        <span class="edition-season">Summer 2026</span>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- 2024-2025 -->
+  <section class="edition-year">
+    <div class="edition-year-header">
+      <h2>2024 &ndash; 2025</h2>
+      <span class="edition-count">4 editions</span>
+    </div>
+    <div class="edition-grid">
+
+      <a class="edition-card" href="assets/pdfs/fall-2024.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+          <img src="assets/covers/fall-2024-cover.png" alt="Fall 2024 edition cover">
+        </div>
+        <span class="edition-season">Fall 2024</span>
+      </a>
+
+      <a class="edition-card" href="assets/pdfs/winter-2024.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+           <img src="assets/covers/winter-2024-cover.png" alt="Winter 2024 edition cover">
+        </div>
+        <span class="edition-season">Winter 2024</span>
+      </a>
+
+      <a class="edition-card" href="assets/pdfs/spring-2025.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+           <img src="assets/covers/spring-2025-cover.jpg" alt="Spring 2025 edition cover">
+        </div>
+        <span class="edition-season">Spring 2025</span>
+      </a>
+
+      <a class="edition-card" href="assets/pdfs/summer-2025.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+          <img src="assets/covers/summer-2025-cover.jpg" alt="Summer 2025 edition cover">
+        </div>
+        <span class="edition-season">Summer 2025</span>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- 2023-2024 -->
+  <section class="edition-year">
+    <div class="edition-year-header">
+      <h2>2023 &ndash; 2024</h2>
+      <span class="edition-count">4 editions</span>
+    </div>
+    <div class="edition-grid">
+
+      <a class="edition-card" href="assets/pdfs/fall-2023.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+           <img src="assets/covers/fall-2023-cover.png" alt="Fall 2023 edition cover">
+        </div>
+        <span class="edition-season">Fall 2023</span>
+      </a>
+
+      <a class="edition-card" href="assets/pdfs/winter-2023.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+          <img src="assets/covers/winter-2023-cover.jpg" alt="Winter 2023 edition cover">
+        </div>
+        <span class="edition-season">Winter 2023</span>
+      </a>
+
+      <a class="edition-card" href="assets/pdfs/spring-2024.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+           <img src="assets/covers/spring-2024-cover.png" alt="Spring 2024 edition cover">
+        </div>
+        <span class="edition-season">Spring 2024</span>
+      </a>
+
+      <a class="edition-card" href="assets/pdfs/summer-2024.pdf" target="_blank" rel="noopener">
+        <div class="edition-cover-frame">
+          <img src="assets/covers/summer-2024-cover.jpg" alt="Summer 2024 edition cover">
+        </div>
+        <span class="edition-season">Summer 2024</span>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="archive-links">
+    <a href="https://thechurchillchronicle.wordpress.com/" target="_blank" rel="noopener">Older site (2012&ndash;2015)</a>
+    <a href="https://theofficialchurchillchronicle.wordpress.com/" target="_blank" rel="noopener">Previous site (2018&ndash;2026)</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>&copy; Churchill Chronicle</span>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/thechurchillchronicle/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:churchillchronicleofficial@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('themeToggle');
+    function currentTheme() {
+      var attr = document.documentElement.getAttribute('data-theme');
+      if (attr) return attr;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function updateIcon() {
+      toggle.textContent = currentTheme() === 'dark' ? '\u2600' : '\u263D';
+    }
+    updateIcon();
+    toggle.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateIcon();
+    });
+  })();
+</script>
+
+</body>
+</html>

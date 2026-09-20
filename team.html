@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function () {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exec Team — The Churchill Chronicle</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <img class="logo-mark" src="assets/images/logo.svg" alt="Churchill Chronicle logo">
+      <div class="brand-text">
+        <div class="name">The Churchill Chronicle</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html" class="active">Team</a>
+        <a href="editions.html">Past editions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme">&#9789;</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-header">
+    <p class="page-eyebrow">Team</p>
+  </div>
+
+  <div class="wip-wrap">
+    <p class="wip-eyebrow">Work in progress</p>
+    <h1 class="wip-title">Exec photos and profiles are coming soon.</h1>
+    <p class="wip-text">
+      We're putting this page together — check back once exec headshots are in.
+      In the meantime, you can see a breakdown of every role on the
+      <a href="about.html" style="color: var(--stamp); border-bottom: 1px solid var(--stamp);">About page</a>.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>&copy; Churchill Chronicle</span>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/thechurchillchronicle/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:churchillchronicleofficial@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('themeToggle');
+    function currentTheme() {
+      var attr = document.documentElement.getAttribute('data-theme');
+      if (attr) return attr;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function updateIcon() {
+      toggle.textContent = currentTheme() === 'dark' ? '\u2600' : '\u263D';
+    }
+    updateIcon();
+    toggle.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateIcon();
+    });
+  })();
+</script>
+
+</body>
+</html>
