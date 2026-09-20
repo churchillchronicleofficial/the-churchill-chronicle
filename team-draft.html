@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function () {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Team (Draft) — The Churchill Chronicle</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+</head>
+<body>
+
+<!-- DRAFT ONLY — this file is not linked from any page's nav.
+     Once exec photos are in, use this markup to replace team.html. -->
+<div class="draft-flag">DRAFT — not linked in site navigation</div>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <img class="logo-mark" src="assets/images/logo.svg" alt="Churchill Chronicle logo">
+      <div class="brand-text">
+        <div class="name">The Churchill Chronicle</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html" class="active">Team</a>
+        <a href="editions.html">Past Editions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme">&#9789;</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-header">
+    <p class="page-eyebrow">Team</p>
+  </div>
+
+  <div class="exec-intro">
+    <p>Meet the 2025&ndash;2026 executive team behind every edition of the Chronicle.</p>
+  </div>
+
+  <!--
+    HOW TO SWAP IN A REAL PHOTO:
+    Replace the .exec-photo placeholder div's contents with:
+      <img src="assets/execs/first-last.jpg" alt="First Last">
+    Keep the outer .exec-photo div and its classes.
+
+    HOW TO UPDATE A NAME/EMAIL:
+    Edit the .exec-name text and the mailto: link + link text in .exec-email.
+  -->
+
+  <div class="exec-grid">
+
+    <div class="exec-card">
+      <div class="exec-photo">
+        <span class="label">Photo</span>
+        <span class="file">assets/execs/editor-in-chief.jpg</span>
+      </div>
+      <p class="exec-role">Editor in Chief</p>
+      <h3 class="exec-name">Full Name</h3>
+      <p class="exec-desc">Manages the executive team and writing staff, coordinates with group editors, and does the final edit pass on every piece before it goes to print.</p>
+      <a class="exec-email" href="mailto:name@educbe.ca">name@educbe.ca</a>
+    </div>
+
+    <div class="exec-card">
+      <div class="exec-photo">
+        <span class="label">Photo</span>
+        <span class="file">assets/execs/jr-editor-in-chief.jpg</span>
+      </div>
+      <p class="exec-role">Jr. Editor in Chief</p>
+      <h3 class="exec-name">Full Name</h3>
+      <p class="exec-desc">Supports the Editor in Chief with writer coordination, managing reporters, editing submissions, and setting each edition's writing themes.</p>
+      <a class="exec-email" href="mailto:name@educbe.ca">name@educbe.ca</a>
+    </div>
+
+    <div class="exec-card">
+      <div class="exec-photo">
+        <span class="label">Photo</span>
+        <span class="file">assets/execs/chief-of-marketing.jpg</span>
+      </div>
+      <p class="exec-role">Chief of Marketing</p>
+      <h3 class="exec-name">Full Name</h3>
+      <p class="exec-desc">Spreads awareness about the Chronicle, manages the team's social media, updates the website, and oversees the release of each edition.</p>
+      <a class="exec-email" href="mailto:name@educbe.ca">name@educbe.ca</a>
+    </div>
+
+    <div class="exec-card">
+      <div class="exec-photo">
+        <span class="label">Photo</span>
+        <span class="file">assets/execs/chief-of-design-1.jpg</span>
+      </div>
+      <p class="exec-role">Chief of Design</p>
+      <h3 class="exec-name">Full Name</h3>
+      <p class="exec-desc">Coordinates the creative team, assigns designers to pages, reviews designs, makes the magazine covers, and trains next year's Chiefs of Design.</p>
+      <a class="exec-email" href="mailto:name@educbe.ca">name@educbe.ca</a>
+    </div>
+
+    <div class="exec-card">
+      <div class="exec-photo">
+        <span class="label">Photo</span>
+        <span class="file">assets/execs/chief-of-design-2.jpg</span>
+      </div>
+      <p class="exec-role">Chief of Design</p>
+      <h3 class="exec-name">Full Name</h3>
+      <p class="exec-desc">Coordinates the creative team, assigns designers to pages, reviews designs, makes the magazine covers, and trains next year's Chiefs of Design.</p>
+      <a class="exec-email" href="mailto:name@educbe.ca">name@educbe.ca</a>
+    </div>
+
+    <div class="exec-card">
+      <div class="exec-photo">
+        <span class="label">Photo</span>
+        <span class="file">assets/execs/jr-chief-of-design-1.jpg</span>
+      </div>
+      <p class="exec-role">Jr. Chief of Design</p>
+      <h3 class="exec-name">Full Name</h3>
+      <p class="exec-desc">Assists the Chiefs of Design with creative coordination, designer training, setting themes, reviewing designs, and laying out extra pages like the table of contents.</p>
+      <a class="exec-email" href="mailto:name@educbe.ca">name@educbe.ca</a>
+    </div>
+
+    <div class="exec-card">
+      <div class="exec-photo">
+        <span class="label">Photo</span>
+        <span class="file">assets/execs/jr-chief-of-design-2.jpg</span>
+      </div>
+      <p class="exec-role">Jr. Chief of Design</p>
+      <h3 class="exec-name">Full Name</h3>
+      <p class="exec-desc">Assists the Chiefs of Design with creative coordination, designer training, setting themes, reviewing designs, and laying out extra pages like the table of contents.</p>
+      <a class="exec-email" href="mailto:name@educbe.ca">name@educbe.ca</a>
+    </div>
+
+    <div class="exec-card">
+      <div class="exec-photo">
+        <span class="label">Photo</span>
+        <span class="file">assets/execs/human-resources.jpg</span>
+      </div>
+      <p class="exec-role">Human Resources Officer</p>
+      <h3 class="exec-name">Full Name</h3>
+      <p class="exec-desc">The Chronicle's external contact — sends meeting and deadline announcements, answers member questions, organizes team events, and leads at the Club Fair.</p>
+      <a class="exec-email" href="mailto:name@educbe.ca">name@educbe.ca</a>
+    </div>
+
+    <div class="exec-card">
+      <div class="exec-photo">
+        <span class="label">Photo</span>
+        <span class="file">assets/execs/chief-of-operations.jpg</span>
+      </div>
+      <p class="exec-role">Chief of Operations</p>
+      <h3 class="exec-name">Full Name</h3>
+      <p class="exec-desc">Organizes and manages the team's budget and finances, sends emails, and communicates with external parties on the club's behalf.</p>
+      <a class="exec-email" href="mailto:name@educbe.ca">name@educbe.ca</a>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>&copy; Churchill Chronicle</span>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/thechurchillchronicle/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:churchillchronicleofficial@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('themeToggle');
+    function currentTheme() {
+      var attr = document.documentElement.getAttribute('data-theme');
+      if (attr) return attr;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function updateIcon() {
+      toggle.textContent = currentTheme() === 'dark' ? '\u2600' : '\u263D';
+    }
+    updateIcon();
+    toggle.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateIcon();
+    });
+  })();
+</script>
+
+</body>
+</html>
