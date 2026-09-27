@@ -155,7 +155,7 @@
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
     function updateIcon() {
-      toggle.textContent = currentTheme() === 'dark' ? '\u2600' : '\u263D';
+      toggle.textContent = currentTheme() === 'dark' ? '\u2600\uFE0E' : '\u263D\uFE0E';
     }
     updateIcon();
     toggle.addEventListener('click', function () {
