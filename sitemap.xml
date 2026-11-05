@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  <!-- Homepage -->
+  <url>
+    <loc>https://churchillchronicleofficial.github.io/the-churchill-chronicle/</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <!-- About Page -->
+  <url>
+    <loc>https://churchillchronicleofficial.github.io/the-churchill-chronicle/about.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <!-- Team Page -->
+  <url>
+    <loc>https://churchillchronicleofficial.github.io/the-churchill-chronicle/team.html</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <!-- Past Editions Page -->
+  <url>
+    <loc>https://churchillchronicleofficial.github.io/the-churchill-chronicle/editions.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <!-- Contact Page -->
+  <url>
+    <loc>https://churchillchronicleofficial.github.io/the-churchill-chronicle/contact.html</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+</urlset>
